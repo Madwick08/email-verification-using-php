@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login Email Verification</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      background: #0d0d0d;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      display: flex;
+      width: 1000px;
+      max-width: 95%;
+      background: #111;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .left {
+      flex: 1.1;
+      background-color: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .left img {
+      width: 4in; /* Image width set to ~2 inches */
+      height: auto;
+      object-fit: contain;
+      padding: 20px;
+    }
+
+    .right {
+      flex: 1;
+      padding: 40px;
+      color: white;
+      background-color: #000;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .right h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin: 0 auto 10px;
+      background: url('https://cdn-icons-png.flaticon.com/512/149/149071.png') no-repeat center/cover;
+    }
+
+    .input-group {
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    .input-group input {
+      width: 100%;
+      padding: 12px 15px 12px 45px;
+      border-radius: 30px;
+      border: none;
+      background: #1f1f1f;
+      color: white;
+    }
+
+    .input-group i {
+      position: absolute;
+      left: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #aaa;
+    }
+
+    input[type="submit"] {
+      width: 100%;
+      padding: 12px;
+      background-color: #4c8bf5;
+      color: white;
+      font-weight: 600;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      font-size: 16px;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #366ed8;
+    }
+
+    .forgot-link {
+      text-align: right;
+      margin-top: 10px;
+      margin-bottom: 15px;
+    }
+
+    .forgot-link a {
+      font-size: 13px;
+      color: #999;
+      text-decoration: none;
+    }
+
+    .signup {
+      text-align: center;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    .signup a {
+      color: #4c8bf5;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .social-icons-below {
+      margin-top: 25px;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+    }
+
+    .social-icons-below a {
+      color: #fff;
+      font-size: 24px;
+      transition: transform 0.3s;
+    }
+
+    .social-icons-below a:hover {
+      transform: scale(1.2);
+      color: #4c8bf5;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="left">
+      <img src="computer.png" alt="Illustration of a person at a computer" />
+    </div>
+    <div class="right">
+      <div class="avatar"></div>
+      <h2>Sign In</h2>
+      <form action="login.php" method="POST">
+        <div class="input-group">
+          <i class="fas fa-user"></i>
+          <input type="text" name="username" placeholder="Username" required />
+        </div>
+        <div class="input-group">
+          <i class="fas fa-lock"></i>
+          <input type="password" name="password" placeholder="Password" required />
+        </div>
+        <div class="forgot-link">
+          <a href="#">Forgot Password?</a>
+        </div>
+        <input type="submit" value="LOGIN" />
+      </form>
+      <div class="signup">
+        No account yet? <a href="#">SIGN UP NOW</a>
+      </div>
+      <div class="social-icons-below">
+        <a href="#"><i class="fab fa-facebook-messenger"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

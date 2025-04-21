@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Verification Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: url('haha.jpg') no-repeat center center/cover;
+      position: relative;
+    }
+
+    /* Optional overlay */
+    body::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 0;
+    }
+
+    .login-box {
+      position: relative;
+      z-index: 1;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(20px);
+      border-radius: 20px;
+      padding: 40px 30px;
+      width: 100%;
+      max-width: 360px;
+      text-align: center;
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+      color: #ffffff;
+    }
+
+    .login-box h2 {
+      margin-bottom: 25px;
+      font-size: 28px;
+      font-weight: 600;
+      color: #00f2fe;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    input[type="email"] {
+      padding: 14px 16px;
+      border-radius: 10px;
+      border: none;
+      font-size: 15px;
+      outline: none;
+      background-color: rgba(255, 255, 255, 0.9);
+      color: #333;
+      transition: box-shadow 0.2s ease;
+    }
+
+    input[type="email"]:focus {
+      box-shadow: 0 0 8px #00f2fe;
+    }
+
+    input[type="submit"] {
+      padding: 14px;
+      border: none;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+      color: #fff;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(0, 242, 254, 0.3);
+    }
+
+    ::placeholder {
+      color: #888;
+    }
+
+    @media screen and (max-width: 400px) {
+      .login-box {
+        padding: 30px 20px;
+      }
+
+      .login-box h2 {
+        font-size: 22px;
+      }
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="login-box">
+    <h2>Email Login</h2>
+    <form action="sendemail.php" method="POST">
+      <input type="email" name="email" placeholder="Enter your email" required>
+      <input type="submit" value="Send Verification">
+    </form>
+  </div>
+</body>
+</html>
